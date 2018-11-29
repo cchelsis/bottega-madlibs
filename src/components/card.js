@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import Input from './input';
+import Content from './content'
 class Card extends Component {
     constructor() {
         super()
@@ -52,9 +53,9 @@ class Card extends Component {
         return(
             <div className="card">
                 {
-                    inputData.map(data => Input( (data), this.handleInputChange ))
+                    inputData.map(data => Input((data), this.handleInputChange ))
                 }
-                
+                <Content data={this.state}/>
             </div>
         )
     }
